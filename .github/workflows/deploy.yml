@@ -42,10 +42,10 @@ jobs:
       - name: Grant Permission to Gradlew
         run: chmod +x ./android/gradlew
 
-      - name: Build APK
+      - name: Build AAB
         run: |
           cd android
-          ./gradlew assembleRelease \
+          ./gradlew bundleRelease \
             -PMYAPP_UPLOAD_STORE_FILE=my-release-key.keystore \
             -PMYAPP_UPLOAD_STORE_PASSWORD=${{ secrets.KEYSTORE_PASSWORD }} \
             -PMYAPP_UPLOAD_KEY_ALIAS=${{ secrets.KEY_ALIAS }} \
