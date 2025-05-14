@@ -55,4 +55,4 @@ jobs:
         run: |
           cd android
           bundle install
-          bundle exec fastlane upload_apk
+          bundle exec fastlane internal
